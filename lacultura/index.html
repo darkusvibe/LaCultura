@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cultura - Kenya's Cultural Heritage Archive</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <h1 class="text-2xl logo text-red-600">La<span class="text-yellow-500">Cultura</span></h1>
+      </div>
+      <div class="hidden md:flex items-center space-x-4">
+        <div class="relative">
+          <input type="text" placeholder="Search cultural content..." 
+                class="pl-10 pr-4 py-2 rounded-full border focus:outline-none focus:ring-2 focus:ring-red-600">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+        </div>
+        <button id="profile-btn" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+          <i class="fas fa-user mr-2"></i>Profile
+        </button>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t py-2">
+      <div class="container mx-auto px-4">
+        <div class="relative mb-4">
+          <input type="text" placeholder="Search cultural content..." 
+                class="w-full pl-10 pr-4 py-2 rounded-full border focus:outline-none focus:ring-2 focus:ring-red-600">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+        </div>
+        <button class="bg-red-600 text-white w-full py-2 rounded-full hover:bg-red-700 transition">
+          <i class="fas fa-user mr-2"></i>Profile
+        </button>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-6">
+    <!-- Home Tab Content -->
+    <div id="home-content" class="tab-content active">
+      <!-- Hero Section -->
+      <section class="hero-pattern h-80 md:h-96 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
+        <div class="text-center text-white relative z-10 px-4">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">Discover Kenya's Rich Cultural Heritage</h1>
+          <p class="text-lg md:text-xl mb-6">Explore traditions, languages, foods, and stories from Kenya's diverse communities</p>
+          <button class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-full transition">
+            Start Exploring
+          </button>
+        </div>
+      </section>
+
+      <!-- Featured Content Carousel -->
+      <section class="mb-12">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-bold">Featured Content</h2>
+          <div class="flex space-x-2">
+            <button id="prev-slide" class="p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="next-slide" class="p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="carousel-container rounded-xl overflow-hidden shadow-lg">
+          <div class="carousel-inner" id="featured-carousel">
+            <div class="carousel-item">
+              <div class="relative h-64 md:h-80">
+                <img src="https://cdn.pixabay.com/photo/2016/09/15/01/57/kenya-1670713_1280.jpg" class="w-full h-full object-cover" alt="Maasai Traditional Dance">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black p-4 text-white">
+                  <h3 class="text-xl font-bold">Maasai Traditional Dance</h3>
+                  <p>Experience the rhythmic jumping dance of the Maasai warriors</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="relative h-64 md:h-80">
+                <img src="https://cdn.pixabay.com/photo/2018/07/06/13/25/food-3520724_1280.jpg" class="w-full h-full object-cover" alt="Kenyan Cuisine">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black p-4 text-white">
+                  <h3 class="text-xl font-bold">Traditional Kenyan Cuisine</h3>
+                  <p>Discover the flavors of authentic Kenyan dishes</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="relative h-64 md:h-80">
+                <img src="https://cdn.pixabay.com/photo/2016/01/30/06/53/kenya-1169991_1280.jpg" class="w-full h-full object-cover" alt="Traditional Attire">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black p-4 text-white">
+                  <h3 class="text-xl font-bold">Traditional Attire</h3>
+                  <p>Explore the vibrant and diverse traditional clothing of Kenya's communities</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommended Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Recommended For You</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="content-card bg-white rounded-xl shadow-md overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2016/02/19/10/36/kenya-1209302_1280.jpg" class="w-full h-48 object-cover" alt="Kikuyu Traditions">
+            <div class="p-4">
+              <span class="text-sm font-medium text-red-600">Story</span>
+              <h3 class="text-lg font-bold mb-2">Kikuyu Folklore and Traditions</h3>
+              <p class="text-gray-600 mb-4">Discover the rich storytelling tradition of the Kikuyu people and their cultural practices.</p>
+              <button class="text-red-600 font-medium hover:underline">Read more</button>
+            </div>
+          </div>
+          <div class="content-card bg-white rounded-xl shadow-md overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2018/03/12/20/07/food-3220614_1280.jpg" class="w-full h-48 object-cover" alt="Swahili Cuisine">
+            <div class="p-4">
+              <span class="text-sm font-medium text-red-600">Food</span>
+              <h3 class="text-lg font-bold mb-2">Coastal Swahili Cuisine</h3>
+              <p class="text-gray-600 mb-4">Explore the aromatic spices and flavors of Kenya's coastal culinary traditions.</p>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+          <div class="content-card bg-white rounded-xl shadow-md overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2017/09/09/11/52/sunset-2731495_1280.jpg" class="w-full h-48 object-cover" alt="Luo Music">
+            <div class="p-4">
+              <span class="text-sm font-medium text-red-600">Music</span>
+              <h3 class="text-lg font-bold mb-2">Luo Musical Traditions</h3>
+              <p class="text-gray-600 mb-4">Listen to traditional Luo music and learn about their unique instruments.</p>
+              <button class="text-red-600 font-medium hover:underline">Explore</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Explore Categories</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div class="bg-white rounded-xl shadow-sm p-4 text-center hover:shadow-md transition cursor-pointer" data-tab="foods">
+            <i class="fas fa-utensils category-icon text-red-600"></i>
+            <h3 class="font-medium">Foods</h3>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-4 text-center hover:shadow-md transition cursor-pointer" data-tab="attire">
+            <i class="fas fa-tshirt category-icon text-yellow-500"></i>
+            <h3 class="font-medium">Attire</h3>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-4 text-center hover:shadow-md transition cursor-pointer" data-tab="languages">
+            <i class="fas fa-language category-icon text-blue-600"></i>
+            <h3 class="font-medium">Languages</h3>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-4 text-center hover:shadow-md transition cursor-pointer" data-tab="videos">
+            <i class="fas fa-video category-icon text-green-600"></i>
+            <h3 class="font-medium">Videos</h3>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm p-4 text-center hover:shadow-md transition cursor-pointer" data-tab="stories">
+            <i class="fas fa-book-open category-icon text-purple-600"></i>
+            <h3 class="font-medium">Stories</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Highlights -->
+      <section class="mb-12">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Community Highlights</h2>
+          <a href="javascript:void(0)" class="text-red-600 font-medium hover:underline" data-tab="community">View all</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2015/05/15/14/27/rusinga-768194_1280.jpg" class="w-full h-48 object-cover" alt="Traditional Crafts">
+            <div class="p-4">
+              <div class="flex items-center mb-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">Maria N.</span>
+              </div>
+              <h3 class="font-bold mb-2">Traditional Basket Weaving</h3>
+              <p class="text-sm text-gray-600">Sharing my grandmother's techniques for kiondo basket weaving that has been passed down for generations.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/00/12/people-2581913_1280.jpg" class="w-full h-48 object-cover" alt="Dance Performance">
+            <div class="p-4">
+              <div class="flex items-center mb-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">James O.</span>
+              </div>
+              <h3 class="font-bold mb-2">Pokomo Dance Festival</h3>
+              <p class="text-sm text-gray-600">Highlights from our recent cultural festival showcasing traditional Pokomo dances.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <img src="https://cdn.pixabay.com/photo/2015/08/01/21/03/kenya-870298_1280.jpg" class="w-full h-48 object-cover" alt="Cultural Event">
+            <div class="p-4">
+              <div class="flex items-center mb-3">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">Sarah K.</span>
+              </div>
+              <h3 class="font-bold mb-2">Samburu Beadwork Artistry</h3>
+              <p class="text-sm text-gray-600">The meaning behind Samburu beadwork patterns and how they tell stories of identity and status.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Games Preview -->
+      <section>
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Cultural Games</h2>
+          <a href="javascript:void(0)" class="text-red-600 font-medium hover:underline" data-tab="games">Play all games</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="relative">
+              <img src="https://cdn.pixabay.com/photo/2018/12/14/10/20/mathematics-3874571_1280.jpg" class="w-full h-48 object-cover" alt="Cultural Quiz">
+              <div class="absolute top-0 right-0 bg-yellow-500 text-white py-1 px-3 rounded-bl-lg">
+                <i class="fas fa-trophy mr-1"></i> Quiz
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">Kenyan Culture Quiz</h3>
+              <p class="text-gray-600 mb-4">Test your knowledge of Kenya's diverse cultures, traditions, and heritage.</p>
+              <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full">Start Quiz</button>
+            </div>
+          </div>
+          <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="relative">
+              <img src="https://cdn.pixabay.com/photo/2016/11/29/13/00/board-1869624_1280.jpg" class="w-full h-48 object-cover" alt="Memory Match">
+              <div class="absolute top-0 right-0 bg-green-500 text-white py-1 px-3 rounded-bl-lg">
+                <i class="fas fa-gamepad mr-1"></i> Match
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">Cultural Memory Match</h3>
+              <p class="text-gray-600 mb-4">Match pairs of traditional Kenyan artifacts, symbols, and landmarks.</p>
+              <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full">Play Game</button>
+            </div>
+          </div>
+          <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="relative">
+              <img src="https://cdn.pixabay.com/photo/2017/05/10/19/10/jigsaw-2301722_1280.jpg" class="w-full h-48 object-cover" alt="Cultural Puzzle">
+              <div class="absolute top-0 right-0 bg-blue-500 text-white py-1 px-3 rounded-bl-lg">
+                <i class="fas fa-puzzle-piece mr-1"></i> Puzzle
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">Kenyan Landmarks Puzzle</h3>
+              <p class="text-gray-600 mb-4">Solve puzzles featuring iconic Kenyan landmarks and cultural sites.</p>
+              <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full">Start Puzzle</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Foods Tab Content -->
+    <div id="foods-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Traditional Kenyan Foods</h1>
+        <p class="text-lg text-gray-600">Discover the rich culinary heritage of Kenya's diverse communities</p>
+      </div>
+      
+      <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div class="relative w-full sm:w-64">
+          <input type="text" placeholder="Search foods..." 
+                class="pl-10 pr-4 py-2 rounded-full border w-full focus:outline-none focus:ring-2 focus:ring-red-600">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+        </div>
+        <div class="flex gap-2">
+          <select class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+            <option value="">All Communities</option>
+            <option value="kikuyu">Kikuyu</option>
+            <option value="luo">Luo</option>
+            <option value="kalenjin">Kalenjin</option>
+            <option value="luhya">Luhya</option>
+            <option value="coastal">Coastal</option>
+          </select>
+          <button class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+            <i class="fas fa-filter mr-2"></i>Filter
+          </button>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2015/03/26/09/39/fried-fish-690346_1280.jpg" class="w-full h-48 object-cover" alt="Ugali and Fish">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Luo Cuisine</span>
+            <h3 class="text-lg font-bold mb-2">Ugali na Samaki</h3>
+            <p class="text-gray-600 mb-4">Traditional cornmeal porridge served with fresh tilapia fish from Lake Victoria.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-utensils mr-2"></i>Main Dish</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2021/01/16/09/05/meal-5921491_1280.jpg" class="w-full h-48 object-cover" alt="Irio">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Kikuyu Cuisine</span>
+            <h3 class="text-lg font-bold mb-2">Irio</h3>
+            <p class="text-gray-600 mb-4">A nutritious blend of mashed potatoes, corn, and peas, often served with roasted meat.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-utensils mr-2"></i>Side Dish</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2019/06/14/09/45/rice-4273281_1280.jpg" class="w-full h-48 object-cover" alt="Pilau">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Coastal Cuisine</span>
+            <h3 class="text-lg font-bold mb-2">Pilau</h3>
+            <p class="text-gray-600 mb-4">Aromatic rice cooked with a blend of spices, meat, and vegetables, popular in the coastal region.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-utensils mr-2"></i>Main Dish</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2017/11/25/17/17/sandwich-2977241_1280.jpg" class="w-full h-48 object-cover" alt="Mandazi">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Swahili Cuisine</span>
+            <h3 class="text-lg font-bold mb-2">Mandazi</h3>
+            <p class="text-gray-600 mb-4">Delicious Swahili doughnuts flavored with cardamom and coconut milk, served with tea.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-cookie mr-2"></i>Snack</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2016/03/30/00/20/beef-1289556_1280.jpg" class="w-full h-48 object-cover" alt="Nyama Choma">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">National Dish</span>
+            <h3 class="text-lg font-bold mb-2">Nyama Choma</h3>
+            <p class="text-gray-600 mb-4">Grilled meat, typically goat or beef, seasoned with salt and served with kachumbari salad.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-utensils mr-2"></i>Main Dish</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2020/08/31/16/12/stew-5533087_1280.jpg" class="w-full h-48 object-cover" alt="Githeri">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Central Kenya</span>
+            <h3 class="text-lg font-bold mb-2">Githeri</h3>
+            <p class="text-gray-600 mb-4">A hearty stew of beans and corn kernels, sometimes mixed with vegetables and potatoes.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-utensils mr-2"></i>Main Dish</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <button class="bg-white border border-red-600 text-red-600 px-6 py-2 rounded-full hover:bg-red-50 transition">
+          Load More <i class="fas fa-chevron-down ml-2"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Attire Tab Content -->
+    <div id="attire-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Traditional Kenyan Attire</h1>
+        <p class="text-lg text-gray-600">Explore the vibrant traditional clothing from Kenya's diverse communities</p>
+      </div>
+      
+      <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div class="relative w-full sm:w-64">
+          <input type="text" placeholder="Search attire..." 
+                class="pl-10 pr-4 py-2 rounded-full border w-full focus:outline-none focus:ring-2 focus:ring-red-600">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+        </div>
+        <div class="flex gap-2">
+          <select class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+            <option value="">All Communities</option>
+            <option value="maasai">Maasai</option>
+            <option value="kikuyu">Kikuyu</option>
+            <option value="swahili">Swahili</option>
+            <option value="samburu">Samburu</option>
+          </select>
+          <button class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+            <i class="fas fa-filter mr-2"></i>Filter
+          </button>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2016/11/14/04/25/maasai-1822520_1280.jpg" class="w-full h-60 object-cover" alt="Maasai Shuka">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Maasai</span>
+            <h3 class="text-lg font-bold mb-2">Maasai Shuka</h3>
+            <p class="text-gray-600 mb-4">The iconic red and blue checkered cloth worn by the Maasai people, symbolizing their cultural identity.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-tshirt mr-2"></i>Everyday Wear</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2019/03/10/08/41/tourism-4046001_1280.jpg" class="w-full h-60 object-cover" alt="Kikoy">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Coastal</span>
+            <h3 class="text-lg font-bold mb-2">Kikoy</h3>
+            <p class="text-gray-600 mb-4">A colorful woven cloth from the coastal region, worn as a wrap, sarong, or scarf by both men and women.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-tshirt mr-2"></i>Versatile</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2014/06/08/12/23/woman-364729_1280.jpg" class="w-full h-60 object-cover" alt="Kitenge">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Pan-African</span>
+            <h3 class="text-lg font-bold mb-2">Kitenge</h3>
+            <p class="text-gray-600 mb-4">Vibrant cotton fabric with colorful patterns, used to create modern and traditional clothing styles.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-tshirt mr-2"></i>Formal & Casual</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2017/08/22/10/29/woman-2668263_1280.jpg" class="w-full h-60 object-cover" alt="Leso">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Swahili</span>
+            <h3 class="text-lg font-bold mb-2">Leso/Kanga</h3>
+            <p class="text-gray-600 mb-4">Rectangular cotton cloth with proverbs and sayings, worn by women as wraps or head coverings.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-tshirt mr-2"></i>Women's Wear</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2017/08/01/23/44/people-2567915_1280.jpg" class="w-full h-60 object-cover" alt="Samburu Beadwork">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Samburu</span>
+            <h3 class="text-lg font-bold mb-2">Samburu Beaded Ornaments</h3>
+            <p class="text-gray-600 mb-4">Intricate beadwork jewelry and accessories that indicate age, social status, and marital status.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-gem mr-2"></i>Accessories</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2013/01/16/14/45/woman-75147_1280.jpg" class="w-full h-60 object-cover" alt="Kikuyu Traditional">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Kikuyu</span>
+            <h3 class="text-lg font-bold mb-2">Muthuru</h3>
+            <p class="text-gray-600 mb-4">Traditional Kikuyu dress made of leather and adorned with beads, worn during cultural ceremonies.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-tshirt mr-2"></i>Ceremonial</span>
+              <button class="text-red-600 font-medium hover:underline">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <button class="bg-white border border-red-600 text-red-600 px-6 py-2 rounded-full hover:bg-red-50 transition">
+          Load More <i class="fas fa-chevron-down ml-2"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Languages Tab Content -->
+    <div id="languages-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Kenyan Languages</h1>
+        <p class="text-lg text-gray-600">Discover the linguistic diversity of Kenya with over 40 languages</p>
+      </div>
+      
+      <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div class="relative w-full sm:w-64">
+          <input type="text" placeholder="Search languages..." 
+                class="pl-10 pr-4 py-2 rounded-full border w-full focus:outline-none focus:ring-2 focus:ring-red-600">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+        </div>
+        <div class="flex gap-2">
+          <select class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+            <option value="">All Language Groups</option>
+            <option value="bantu">Bantu</option>
+            <option value="nilotic">Nilotic</option>
+            <option value="cushitic">Cushitic</option>
+            <option value="official">Official Languages</option>
+          </select>
+          <button class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+            <i class="fas fa-filter mr-2"></i>Filter
+          </button>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="bg-gradient-to-r from-red-600 to-yellow-500 h-24 flex items-center justify-center">
+            <h3 class="text-4xl font-bold text-white">Kiswahili</h3>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">National Language</span>
+            <h3 class="text-lg font-bold mb-2">Kiswahili</h3>
+            <p class="text-gray-600 mb-4">Kenya's national language and a Bantu language with Arabic, Persian, and European language influences.</p>
+            <div class="flex flex-col gap-2">
+              <div>
+                <span class="font-medium">Common Phrase: </span>
+                <span class="italic">"Jambo" (Hello)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium mr-2">Listen: </span>
+                <button class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+                  <i class="fas fa-play text-red-600"></i>
+                </button>
+              </div>
+              <button class="text-red-600 font-medium hover:underline mt-2">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="bg-gradient-to-r from-green-600 to-blue-500 h-24 flex items-center justify-center">
+            <h3 class="text-4xl font-bold text-white">Gikuyu</h3>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Bantu</span>
+            <h3 class="text-lg font-bold mb-2">Gikuyu (Kikuyu)</h3>
+            <p class="text-gray-600 mb-4">The language of the Kikuyu people, Kenya's largest ethnic group, primarily spoken in central Kenya.</p>
+            <div class="flex flex-col gap-2">
+              <div>
+                <span class="font-medium">Common Phrase: </span>
+                <span class="italic">"Wĩmwega" (How are you?)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium mr-2">Listen: </span>
+                <button class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+                  <i class="fas fa-play text-red-600"></i>
+                </button>
+              </div>
+              <button class="text-red-600 font-medium hover:underline mt-2">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="bg-gradient-to-r from-purple-600 to-pink-500 h-24 flex items-center justify-center">
+            <h3 class="text-4xl font-bold text-white">Dholuo</h3>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Nilotic</span>
+            <h3 class="text-lg font-bold mb-2">Dholuo (Luo)</h3>
+            <p class="text-gray-600 mb-4">Spoken by the Luo people in western Kenya near Lake Victoria, it's a Nilotic language with rich oral traditions.</p>
+            <div class="flex flex-col gap-2">
+              <div>
+                <span class="font-medium">Common Phrase: </span>
+                <span class="italic">"Misawa" (Hello)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium mr-2">Listen: </span>
+                <button class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+                  <i class="fas fa-play text-red-600"></i>
+                </button>
+              </div>
+              <button class="text-red-600 font-medium hover:underline mt-2">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="bg-gradient-to-r from-yellow-600 to-red-500 h-24 flex items-center justify-center">
+            <h3 class="text-4xl font-bold text-white">Kalenjin</h3>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Nilotic</span>
+            <h3 class="text-lg font-bold mb-2">Kalenjin</h3>
+            <p class="text-gray-600 mb-4">A group of related languages spoken by the Kalenjin people in the western highlands of Kenya.</p>
+            <div class="flex flex-col gap-2">
+              <div>
+                <span class="font-medium">Common Phrase: </span>
+                <span class="italic">"Chamgei" (Hello)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium mr-2">Listen: </span>
+                <button class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+                  <i class="fas fa-play text-red-600"></i>
+                </button>
+              </div>
+              <button class="text-red-600 font-medium hover:underline mt-2">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="bg-gradient-to-r from-blue-600 to-teal-500 h-24 flex items-center justify-center">
+            <h3 class="text-4xl font-bold text-white">English</h3>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Official Language</span>
+            <h3 class="text-lg font-bold mb-2">English</h3>
+            <p class="text-gray-600 mb-4">An official language used in education, government, and business, introduced during the colonial period.</p>
+            <div class="flex flex-col gap-2">
+              <div>
+                <span class="font-medium">Common Phrase: </span>
+                <span class="italic">"Jambo" (Kenyan English greeting)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium mr-2">Listen: </span>
+                <button class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+                  <i class="fas fa-play text-red-600"></i>
+                </button>
+              </div>
+              <button class="text-red-600 font-medium hover:underline mt-2">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="bg-gradient-to-r from-pink-600 to-indigo-500 h-24 flex items-center justify-center">
+            <h3 class="text-4xl font-bold text-white">Kamba</h3>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Bantu</span>
+            <h3 class="text-lg font-bold mb-2">Kamba</h3>
+            <p class="text-gray-600 mb-4">Spoken by the Kamba people in eastern Kenya, known for its distinctive clicks and tones.</p>
+            <div class="flex flex-col gap-2">
+              <div>
+                <span class="font-medium">Common Phrase: </span>
+                <span class="italic">"Wee wavika ata?" (How are you?)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium mr-2">Listen: </span>
+                <button class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+                  <i class="fas fa-play text-red-600"></i>
+                </button>
+              </div>
+              <button class="text-red-600 font-medium hover:underline mt-2">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <button class="bg-white border border-red-600 text-red-600 px-6 py-2 rounded-full hover:bg-red-50 transition">
+          Load More <i class="fas fa-chevron-down ml-2"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Videos Tab Content -->
+    <div id="videos-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Cultural Videos</h1>
+        <p class="text-lg text-gray-600">Watch videos showcasing Kenya's vibrant cultural heritage</p>
+      </div>
+      
+      <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div class="relative w-full sm:w-64">
+          <input type="text" placeholder="Search videos..." 
+                class="pl-10 pr-4 py-2 rounded-full border w-full focus:outline-none focus:ring-2 focus:ring-red-600">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+        </div>
+        <div class="flex gap-2">
+          <select class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+            <option value="">All Categories</option>
+            <option value="dance">Traditional Dance</option>
+            <option value="music">Music</option>
+            <option value="ceremonies">Ceremonies</option>
+            <option value="crafts">Crafts</option>
+          </select>
+          <button class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+            <i class="fas fa-filter mr-2"></i>Filter
+          </button>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2017/08/06/00/38/people-2587165_1280.jpg" class="w-full h-48 object-cover" alt="Maasai Dance">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <button class="bg-red-600 text-white p-4 rounded-full hover:bg-red-700 transition">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">03:45</span>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Traditional Dance</span>
+            <h3 class="text-lg font-bold mb-2">Maasai Adumu (Jumping Dance)</h3>
+            <p class="text-gray-600 mb-4">Experience the famous jumping dance performed by Maasai warriors as a test of strength and endurance.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-eye mr-2"></i>2.3K views</span>
+              <button class="text-red-600 font-medium hover:underline">Watch</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2019/06/15/22/05/kenya-4276377_1280.jpg" class="w-full h-48 object-cover" alt="Beadwork">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <button class="bg-red-600 text-white p-4 rounded-full hover:bg-red-700 transition">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">05:12</span>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Crafts</span>
+            <h3 class="text-lg font-bold mb-2">The Art of Maasai Beadwork</h3>
+            <p class="text-gray-600 mb-4">Learn about the cultural significance of beadwork and how these intricate designs are created by artisans.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-eye mr-2"></i>1.8K views</span>
+              <button class="text-red-600 font-medium hover:underline">Watch</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2020/01/16/15/20/music-4771050_1280.jpg" class="w-full h-48 object-cover" alt="Traditional Music">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <button class="bg-red-600 text-white p-4 rounded-full hover:bg-red-700 transition">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">04:35</span>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Music</span>
+            <h3 class="text-lg font-bold mb-2">The Sound of Nyatiti</h3>
+            <p class="text-gray-600 mb-4">Discover the traditional eight-stringed lyre from the Luo community and its haunting melodies.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-eye mr-2"></i>3.1K views</span>
+              <button class="text-red-600 font-medium hover:underline">Watch</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2019/12/16/09/50/incense-4698936_1280.jpg" class="w-full h-48 object-cover" alt="Traditional Ceremony">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <button class="bg-red-600 text-white p-4 rounded-full hover:bg-red-700 transition">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">08:20</span>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Ceremonies</span>
+            <h3 class="text-lg font-bold mb-2">Kikuyu Traditional Wedding</h3>
+            <p class="text-gray-600 mb-4">Experience the rich customs and rituals of a traditional Kikuyu wedding ceremony.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-eye mr-2"></i>4.5K views</span>
+              <button class="text-red-600 font-medium hover:underline">Watch</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2018/02/21/08/40/cooking-food-3169493_1280.jpg" class="w-full h-48 object-cover" alt="Traditional Cooking">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <button class="bg-red-600 text-white p-4 rounded-full hover:bg-red-700 transition">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">06:15</span>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Food Culture</span>
+            <h3 class="text-lg font-bold mb-2">Traditional Cooking Methods</h3>
+            <p class="text-gray-600 mb-4">Learn about traditional Kenyan cooking techniques and how meals are prepared in rural communities.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-eye mr-2"></i>2.7K views</span>
+              <button class="text-red-600 font-medium hover:underline">Watch</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2017/08/06/08/00/people-2590997_1280.jpg" class="w-full h-48 object-cover" alt="Basket Weaving">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <button class="bg-red-600 text-white p-4 rounded-full hover:bg-red-700 transition">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">07:42</span>
+          </div>
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Crafts</span>
+            <h3 class="text-lg font-bold mb-2">Kiondo Basket Weaving</h3>
+            <p class="text-gray-600 mb-4">Watch skilled artisans create the iconic Kenyan kiondo baskets using traditional techniques.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-eye mr-2"></i>1.5K views</span>
+              <button class="text-red-600 font-medium hover:underline">Watch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <button class="bg-white border border-red-600 text-red-600 px-6 py-2 rounded-full hover:bg-red-50 transition">
+          Load More <i class="fas fa-chevron-down ml-2"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Stories Tab Content -->
+    <div id="stories-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Cultural Stories</h1>
+        <p class="text-lg text-gray-600">Explore traditional stories, myths, and legends from Kenya's diverse communities</p>
+      </div>
+      
+      <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div class="relative w-full sm:w-64">
+          <input type="text" placeholder="Search stories..." 
+                class="pl-10 pr-4 py-2 rounded-full border w-full focus:outline-none focus:ring-2 focus:ring-red-600">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+        </div>
+        <div class="flex gap-2">
+          <select class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+            <option value="">All Communities</option>
+            <option value="kikuyu">Kikuyu</option>
+            <option value="luo">Luo</option>
+            <option value="maasai">Maasai</option>
+            <option value="coastal">Coastal</option>
+          </select>
+          <button class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+            <i class="fas fa-filter mr-2"></i>Filter
+          </button>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2015/11/21/00/14/mount-kenya-1053850_1280.jpg" class="w-full h-48 object-cover" alt="Mt. Kenya">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Kikuyu</span>
+            <h3 class="text-lg font-bold mb-2">The Origin of Mt. Kenya</h3>
+            <p class="text-gray-600 mb-4">According to Kikuyu mythology, God (Ngai) resided on Mount Kenya, which they called Kirinyaga, meaning "mountain of brightness".</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-book-open mr-2"></i>Creation Myth</span>
+              <button class="text-red-600 font-medium hover:underline">Read Story</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2015/09/06/01/00/hare-926601_1280.jpg" class="w-full h-48 object-cover" alt="Hare">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Luo</span>
+            <h3 class="text-lg font-bold mb-2">The Clever Hare</h3>
+            <p class="text-gray-600 mb-4">A folktale about a clever hare who outsmarts other animals, teaching children about wisdom and cunning intelligence.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-book-open mr-2"></i>Folk Tale</span>
+              <button class="text-red-600 font-medium hover:underline">Read Story</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2019/07/14/08/09/elephant-4336788_1280.jpg" class="w-full h-48 object-cover" alt="Elephant">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Maasai</span>
+            <h3 class="text-lg font-bold mb-2">Why Elephant Has a Long Trunk</h3>
+            <p class="text-gray-600 mb-4">A Maasai tale explaining how the elephant got its distinctive trunk, teaching about curiosity and consequences.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-book-open mr-2"></i>Origin Tale</span>
+              <button class="text-red-600 font-medium hover:underline">Read Story</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2017/05/19/15/16/sun-2326907_1280.jpg" class="w-full h-48 object-cover" alt="Sun and Moon">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Kalenjin</span>
+            <h3 class="text-lg font-bold mb-2">The Sun and Moon's Journey</h3>
+            <p class="text-gray-600 mb-4">A Kalenjin legend about why the sun and moon chase each other across the sky but never meet.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-book-open mr-2"></i>Celestial Myth</span>
+              <button class="text-red-600 font-medium hover:underline">Read Story</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2022/03/27/11/44/cave-7094047_1280.jpg" class="w-full h-48 object-cover" alt="Cave">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Coastal</span>
+            <h3 class="text-lg font-bold mb-2">The Legend of Shimoni Caves</h3>
+            <p class="text-gray-600 mb-4">A story about the mysterious Shimoni caves along Kenya's coast and their role during the slave trade era.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-book-open mr-2"></i>Historical Legend</span>
+              <button class="text-red-600 font-medium hover:underline">Read Story</button>
+            </div>
+          </div>
+        </div>
+        <div class="content-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer">
+          <img src="https://cdn.pixabay.com/photo/2014/09/03/11/14/hyena-434046_1280.jpg" class="w-full h-48 object-cover" alt="Hyena">
+          <div class="p-4">
+            <span class="text-sm font-medium text-red-600">Kamba</span>
+            <h3 class="text-lg font-bold mb-2">The Hyena and the Moon</h3>
+            <p class="text-gray-600 mb-4">A Kamba fable explaining why hyenas howl at the moon, teaching about greed and foolishness.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-gray-500"><i class="fas fa-book-open mr-2"></i>Fable</span>
+              <button class="text-red-600 font-medium hover:underline">Read Story</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <button class="bg-white border border-red-600 text-red-600 px-6 py-2 rounded-full hover:bg-red-50 transition">
+          Load More <i class="fas fa-chevron-down ml-2"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Games Tab Content -->
+    <div id="games-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Cultural Games</h1>
+        <p class="text-lg text-gray-600">Have fun while learning about Kenyan culture through interactive games</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2018/12/14/10/20/mathematics-3874571_1280.jpg" class="w-full h-48 object-cover" alt="Cultural Quiz">
+            <div class="absolute top-0 right-0 bg-yellow-500 text-white py-1 px-3 rounded-bl-lg">
+              <i class="fas fa-trophy mr-1"></i> Quiz
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Kenyan Culture Quiz</h3>
+            <p class="text-gray-600 mb-4">Test your knowledge of Kenya's diverse cultures, traditions, and heritage with this fun quiz.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span class="text-sm font-medium">Difficulty: Medium</span>
+              </div>
+              <span class="text-sm text-gray-500">15 questions</span>
+            </div>
+            <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full mt-4 game-start" data-game="quiz">
+              Start Quiz
+            </button>
+          </div>
+        </div>
+        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2016/11/29/13/00/board-1869624_1280.jpg" class="w-full h-48 object-cover" alt="Memory Match">
+            <div class="absolute top-0 right-0 bg-green-500 text-white py-1 px-3 rounded-bl-lg">
+              <i class="fas fa-gamepad mr-1"></i> Match
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Cultural Memory Match</h3>
+            <p class="text-gray-600 mb-4">Match pairs of traditional Kenyan artifacts, symbols, and landmarks in this memory game.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span class="text-sm font-medium">Difficulty: Easy</span>
+              </div>
+              <span class="text-sm text-gray-500">3 levels</span>
+            </div>
+            <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full mt-4 game-start" data-game="memory">
+              Play Game
+            </button>
+          </div>
+        </div>
+        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2017/05/10/19/10/jigsaw-2301722_1280.jpg" class="w-full h-48 object-cover" alt="Puzzle">
+            <div class="absolute top-0 right-0 bg-blue-500 text-white py-1 px-3 rounded-bl-lg">
+              <i class="fas fa-puzzle-piece mr-1"></i> Puzzle
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Kenyan Landmarks Puzzle</h3>
+            <p class="text-gray-600 mb-4">Solve puzzles featuring iconic Kenyan landmarks and cultural sites.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span class="text-sm font-medium">Difficulty: Hard</span>
+              </div>
+              <span class="text-sm text-gray-500">5 puzzles</span>
+            </div>
+            <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full mt-4 game-start" data-game="puzzle">
+              Start Puzzle
+            </button>
+          </div>
+        </div>
+        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2017/01/31/15/33/apple-2025456_1280.png" class="w-full h-48 object-cover" alt="Word Search">
+            <div class="absolute top-0 right-0 bg-purple-500 text-white py-1 px-3 rounded-bl-lg">
+              <i class="fas fa-search mr-1"></i> Word Search
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Kenyan Languages Word Search</h3>
+            <p class="text-gray-600 mb-4">Find words from various Kenyan languages in this challenging word search puzzle.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span class="text-sm font-medium">Difficulty: Medium</span>
+              </div>
+              <span class="text-sm text-gray-500">3 levels</span>
+            </div>
+            <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full mt-4 game-start" data-game="wordsearch">
+              Play Game
+            </button>
+          </div>
+        </div>
+        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2016/02/22/09/44/chess-1215079_1280.jpg" class="w-full h-48 object-cover" alt="Bao Game">
+            <div class="absolute top-0 right-0 bg-indigo-500 text-white py-1 px-3 rounded-bl-lg">
+              <i class="fas fa-chess mr-1"></i> Board Game
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Bao: Traditional Mancala</h3>
+            <p class="text-gray-600 mb-4">Learn and play the traditional East African board game of strategy and skill.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span class="text-sm font-medium">Difficulty: Hard</span>
+              </div>
+              <span class="text-sm text-gray-500">2 player</span>
+            </div>
+            <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full mt-4 game-start" data-game="bao">
+              Play Game
+            </button>
+          </div>
+        </div>
+        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="https://cdn.pixabay.com/photo/2015/02/07/09/02/suitcases-626422_1280.jpg" class="w-full h-48 object-cover" alt="Culture Explorer">
+            <div class="absolute top-0 right-0 bg-pink-500 text-white py-1 px-3 rounded-bl-lg">
+              <i class="fas fa-globe-africa mr-1"></i> Adventure
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Kenya Culture Explorer</h3>
+            <p class="text-gray-600 mb-4">Travel across Kenya in this virtual adventure, learning about different communities and cultures.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                <span class="text-sm font-medium">Difficulty: Easy</span>
+              </div>
+              <span class="text-sm text-gray-500">8 regions</span>
+            </div>
+            <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition w-full mt-4 game-start" data-game="explorer">
+              Start Adventure
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Container (placeholder where games will load) -->
+      <div id="game-container" class="bg-white rounded-xl shadow-lg p-6 mb-8 hidden">
+        <div class="flex justify-between items-center mb-6">
+          <h2 id="active-game-title" class="text-xl font-bold">Game Title</h2>
+          <button id="close-game" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        
+        <div id="game-area" class="min-h-72 flex items-center justify-center">
+          <p class="text-gray-500 text-lg text-center">Loading game...</p>
+        </div>
+        
+        <div class="flex justify-between items-center mt-6">
+          <div>
+            <span class="font-medium">Score: </span>
+            <span id="game-score">0</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="restart-game" class="bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition">
+              <i class="fas fa-redo mr-2"></i>Restart
+            </button>
+            <button id="game-help" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              <i class="fas fa-question-circle mr-2"></i>Help
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-red-600 to-yellow-500 rounded-xl p-6 text-white">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-bold mb-2">Track Your Progress</h3>
+            <p>Sign in to save your scores and track your learning progress across all games!</p>
+          </div>
+          <button class="bg-white text-red-600 py-2 px-6 rounded-full hover:bg-gray-100 transition font-medium">
+            <i class="fas fa-user-plus mr-2"></i> Create Profile
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community Tab Content -->
+    <div id="community-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Community Contributions</h1>
+        <p class="text-lg text-gray-600">Share and explore cultural content contributed by community members</p>
+      </div>
+      
+      <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <h2 class="text-xl font-bold mb-4">Share Your Cultural Knowledge</h2>
+        <form id="contribution-form">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="block text-gray-700 mb-2" for="title">Title</label>
+              <input type="text" id="title" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Title of your contribution">
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2" for="category">Category</label>
+              <select id="category" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600">
+                <option value="">Select a category</option>
+                <option value="food">Food</option>
+                <option value="attire">Attire</option>
+                <option value="language">Language</option>
+                <option value="story">Story</option>
+                <option value="music">Music</option>
+                <option value="dance">Dance</option>
+                <option value="craft">Craft</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 mb-2" for="community">Community/Ethnicity</label>
+            <input type="text" id="community" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="e.g., Kikuyu, Luo, Maasai, etc.">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 mb-2" for="description">Description</label>
+            <textarea id="description" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Share details about your cultural contribution..."></textarea>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 mb-2">Media Upload</label>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+              <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
+              <p class="mb-2">Drag and drop files here or click to browse</p>
+              <p class="text-sm text-gray-500">Supported formats: JPG, PNG, MP3, MP4 (Max 25MB)</p>
+              <input type="file" id="media-upload" class="hidden">
+              <button type="button" id="browse-files" class="mt-2 bg-gray-200 text-gray-700 py-1 px-4 rounded-md hover:bg-gray-300 transition">
+                Browse Files
+              </button>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 mb-2">Permission</label>
+            <div class="flex items-center">
+              <input type="checkbox" id="permission" class="mr-2">
+              <label for="permission">I confirm that this contribution respects cultural sensitivities and that I have the right to share this content.</label>
+            </div>
+          </div>
+          <button type="submit" class="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition">
+            Submit Contribution
+          </button>
+        </form>
+      </div>
+      
+      <h2 class="text-2xl font-bold mb-6">Recent Community Contributions</h2>
+      
+      <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div class="relative w-full sm:w-64">
+          <input type="text" placeholder="Search contributions..." 
+                class="pl-10 pr-4 py-2 rounded-full border w-full focus:outline-none focus:ring-2 focus:ring-red-600">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+        </div>
+        <div class="flex gap-2">
+          <select class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600">
+            <option value="">All Categories</option>
+            <option value="food">Food</option>
+            <option value="attire">Attire</option>
+            <option value="language">Language</option>
+            <option value="story">Story</option>
+            <option value="music">Music</option>
+            <option value="dance">Dance</option>
+            <option value="craft">Craft</option>
+          </select>
+          <button class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">
+            <i class="fas fa-filter mr-2"></i>Filter
+          </button>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2015/05/15/14/27/rusinga-768194_1280.jpg" class="w-full h-48 object-cover" alt="Traditional Crafts">
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">Maria N.</span>
+              </div>
+              <span class="text-xs text-gray-500">3 days ago</span>
+            </div>
+            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mb-2">Craft</span>
+            <h3 class="font-bold mb-2">Traditional Basket Weaving</h3>
+            <p class="text-sm text-gray-600 mb-3">Sharing my grandmother's techniques for kiondo basket weaving that has been passed down for generations in my Kamba family.</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <button class="text-gray-500 hover:text-red-600 transition mr-3">
+                  <i class="far fa-heart mr-1"></i> 24
+                </button>
+                <button class="text-gray-500 hover:text-blue-600 transition">
+                  <i class="far fa-comment mr-1"></i> 8
+                </button>
+              </div>
+              <button class="text-red-600 text-sm font-medium hover:underline">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2017/08/05/00/12/people-2581913_1280.jpg" class="w-full h-48 object-cover" alt="Dance Performance">
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">James O.</span>
+              </div>
+              <span class="text-xs text-gray-500">1 week ago</span>
+            </div>
+            <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mb-2">Dance</span>
+            <h3 class="font-bold mb-2">Pokomo Dance Festival</h3>
+            <p class="text-sm text-gray-600 mb-3">Highlights from our recent cultural festival showcasing traditional Pokomo dances that celebrate harvest and community unity.</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <button class="text-gray-500 hover:text-red-600 transition mr-3">
+                  <i class="far fa-heart mr-1"></i> 36
+                </button>
+                <button class="text-gray-500 hover:text-blue-600 transition">
+                  <i class="far fa-comment mr-1"></i> 12
+                </button>
+              </div>
+              <button class="text-red-600 text-sm font-medium hover:underline">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2015/08/01/21/03/kenya-870298_1280.jpg" class="w-full h-48 object-cover" alt="Cultural Event">
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">Sarah K.</span>
+              </div>
+              <span class="text-xs text-gray-500">2 weeks ago</span>
+            </div>
+            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mb-2">Attire</span>
+            <h3 class="font-bold mb-2">Samburu Beadwork Artistry</h3>
+            <p class="text-sm text-gray-600 mb-3">The meaning behind Samburu beadwork patterns and how they tell stories of identity and status within the community.</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <button class="text-gray-500 hover:text-red-600 transition mr-3">
+                  <i class="far fa-heart mr-1"></i> 45
+                </button>
+                <button class="text-gray-500 hover:text-blue-600 transition">
+                  <i class="far fa-comment mr-1"></i> 15
+                </button>
+              </div>
+              <button class="text-red-600 text-sm font-medium hover:underline">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2018/02/21/08/40/cooking-food-3169493_1280.jpg" class="w-full h-48 object-cover" alt="Traditional Food">
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">John M.</span>
+              </div>
+              <span class="text-xs text-gray-500">3 weeks ago</span>
+            </div>
+            <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded mb-2">Food</span>
+            <h3 class="font-bold mb-2">My Grandmother's Mukimo Recipe</h3>
+            <p class="text-sm text-gray-600 mb-3">A traditional Kikuyu recipe for mukimo with a special twist that has been in my family for generations.</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <button class="text-gray-500 hover:text-red-600 transition mr-3">
+                  <i class="far fa-heart mr-1"></i> 52
+                </button>
+                <button class="text-gray-500 hover:text-blue-600 transition">
+                  <i class="far fa-comment mr-1"></i> 20
+                </button>
+              </div>
+              <button class="text-red-600 text-sm font-medium hover:underline">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2015/05/31/15/07/coffee-792113_1280.jpg" class="w-full h-48 object-cover" alt="Traditional Music">
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">David O.</span>
+              </div>
+              <span class="text-xs text-gray-500">1 month ago</span>
+            </div>
+            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded mb-2">Music</span>
+            <h3 class="font-bold mb-2">Traditional Luo Folk Songs</h3>
+            <p class="text-sm text-gray-600 mb-3">A collection of traditional Luo folk songs that celebrate important life events and community gatherings.</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <button class="text-gray-500 hover:text-red-600 transition mr-3">
+                  <i class="far fa-heart mr-1"></i> 38
+                </button>
+                <button class="text-gray-500 hover:text-blue-600 transition">
+                  <i class="far fa-comment mr-1"></i> 9
+                </button>
+              </div>
+              <button class="text-red-600 text-sm font-medium hover:underline">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2015/06/22/08/37/children-817365_1280.jpg" class="w-full h-48 object-cover" alt="Traditional Story">
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-3">
+              <div class="flex items-center">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="w-8 h-8 rounded-full object-cover" alt="User">
+                <span class="ml-2 text-sm font-medium">Nancy W.</span>
+              </div>
+              <span class="text-xs text-gray-500">1 month ago</span>
+            </div>
+            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded mb-2">Story</span>
+            <h3 class="font-bold mb-2">The Legend of Lake Turkana</h3>
+            <p class="text-sm text-gray-600 mb-3">A traditional El Molo story about the origins of Lake Turkana and the spirits that reside within its waters.</p>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                <button class="text-gray-500 hover:text-red-600 transition mr-3">
+                  <i class="far fa-heart mr-1"></i> 29
+                </button>
+                <button class="text-gray-500 hover:text-blue-600 transition">
+                  <i class="far fa-comment mr-1"></i> 11
+                </button>
+              </div>
+              <button class="text-red-600 text-sm font-medium hover:underline">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <button class="bg-white border border-red-600 text-red-600 px-6 py-2 rounded-full hover:bg-red-50 transition">
+          Load More <i class="fas fa-chevron-down ml-2"></i>
+        </button>
+      </div>
+
+      <div class="mt-12 bg-gradient-to-r from-red-600 to-yellow-500 rounded-xl p-6 text-white">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-bold mb-2">Community Guidelines</h3>
+            <p>Please ensure your contributions respect cultural sensitivities and authenticity. All submissions are reviewed before publishing.</p>
+          </div>
+          <button class="bg-white text-red-600 py-2 px-6 rounded-full hover:bg-gray-100 transition font-medium">
+            <i class="fas fa-book-open mr-2"></i> Read Guidelines
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Tab Content -->
+    <div id="feedback-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Your Feedback Matters</h1>
+        <p class="text-lg text-gray-600">Help us improve La Cultura by sharing your thoughts and suggestions</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h2 class="text-xl font-bold mb-6">Provide Feedback</h2>
+          <form id="feedback-form">
+            <div class="mb-4">
+              <label class="block text-gray-700 mb-2">How would you rate your experience?</label>
+              <div class="flex space-x-2 text-2xl text-gray-400">
+                <button type="button" class="rating-star hover:text-yellow-500 focus:outline-none transition" data-rating="1">
+                  <i class="far fa-star"></i>
+                </button>
+                <button type="button" class="rating-star hover:text-yellow-500 focus:outline-none transition" data-rating="2">
+                  <i class="far fa-star"></i>
+                </button>
+                <button type="button" class="rating-star hover:text-yellow-500 focus:outline-none transition" data-rating="3">
+                  <i class="far fa-star"></i>
+                </button>
+                <button type="button" class="rating-star hover:text-yellow-500 focus:outline-none transition" data-rating="4">
+                  <i class="far fa-star"></i>
+                </button>
+                <button type="button" class="rating-star hover:text-yellow-500 focus:outline-none transition" data-rating="5">
+                  <i class="far fa-star"></i>
+                </button>
+              </div>
+              <input type="hidden" id="rating-value" value="0">
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 mb-2" for="feedback-type">Feedback Type</label>
+              <select id="feedback-type" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600">
+                <option value="">Select a type</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="content-request">Content Request</option>
+                <option value="bug-report">Bug Report</option>
+                <option value="compliment">Compliment</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 mb-2" for="feedback-message">Your Feedback</label>
+              <textarea id="feedback-message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Please share your thoughts, ideas, or concerns..."></textarea>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 mb-2" for="feedback-email">Email (optional)</label>
+              <input type="email" id="feedback-email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="your@email.com">
+              <p class="text-sm text-gray-500 mt-1">If you'd like us to follow up with you</p>
+            </div>
+            <button type="submit" class="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition">
+              Submit Feedback
+            </button>
+          </form>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h2 class="text-xl font-bold mb-6">Frequently Asked Questions</h2>
+          <div class="space-y-4">
+            <div class="border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                <span>What is the purpose of La Cultura?</span>
+                <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+              </button>
+              <div class="faq-answer hidden pt-2 text-gray-600">
+                La Cultura is a digital platform dedicated to preserving and promoting Kenyan cultural heritage. It serves as an educational resource for people interested in learning about Kenya's diverse communities, traditions, languages, and cultural practices.
+              </div>
+            </div>
+            <div class="border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                <span>How can I contribute content?</span>
+                <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+              </button>
+              <div class="faq-answer hidden pt-2 text-gray-600">
+                You can contribute by visiting the Community page and filling out the contribution form. All submissions are reviewed by our team to ensure they meet our guidelines for cultural respect and authenticity before being published.
+              </div>
+            </div>
+            <div class="border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                <span>Is all content verified for cultural accuracy?</span>
+                <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+              </button>
+              <div class="faq-answer hidden pt-2 text-gray-600">
+                Yes, we work with cultural experts from different Kenyan communities to verify the accuracy and authenticity of our content. Community contributions are also reviewed by these experts before publishing.
+              </div>
+            </div>
+            <div class="border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                <span>Are there plans to include more communities?</span>
+                <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+              </button>
+              <div class="faq-answer hidden pt-2 text-gray-600">
+                Absolutely! We're continuously working to expand our coverage to include all of Kenya's rich and diverse communities. If you have suggestions for communities that should be included, please let us know through the feedback form.
+              </div>
+            </div>
+            <div class="border-b pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                <span>Can I use this platform for educational purposes?</span>
+                <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+              </button>
+              <div class="faq-answer hidden pt-2 text-gray-600">
+                Yes, La Cultura is designed to be an educational resource. Teachers, students, and cultural enthusiasts are encouraged to use our platform for learning purposes. We do ask that you credit La Cultura when using our content in presentations or papers.
+              </div>
+            </div>
+            <div class="pb-4">
+              <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                <span>How often is new content added?</span>
+                <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+              </button>
+              <div class="faq-answer hidden pt-2 text-gray-600">
+                We add new content weekly, including both our curated materials and approved community contributions. Follow us on social media or subscribe to our newsletter to stay updated on new additions.
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-6 border-t">
+            <h3 class="font-bold mb-4">Still have questions?</h3>
+            <button class="bg-gray-200 text-gray-800 py-2 px-6 rounded-md hover:bg-gray-300 transition">
+              <i class="fas fa-envelope mr-2"></i> Contact Support
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-red-600 to-yellow-500 rounded-xl p-6 text-white">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-bold mb-2">Thank You for Your Feedback!</h3>
+            <p>Your input helps us create a better platform for preserving and sharing Kenya's cultural heritage.</p>
+          </div>
+          <div class="flex space-x-4">
+            <button class="bg-white text-red-600 py-2 px-6 rounded-full hover:bg-gray-100 transition font-medium">
+              <i class="fas fa-share-alt mr-2"></i> Share
+            </button>
+            <button class="bg-transparent border-2 border-white text-white py-2 px-6 rounded-full hover:bg-white hover:bg-opacity-20 transition font-medium">
+              <i class="fas fa-bullhorn mr-2"></i> Spread the Word
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Profile Tab Content -->
+    <div id="profile-content" class="tab-content">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Your Profile</h1>
+        <p class="text-lg text-gray-600">Customize your experience and track your cultural learning journey</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div class="md:col-span-1">
+          <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+            <div class="flex flex-col items-center">
+              <div class="w-24 h-24 rounded-full bg-gray-300 mb-4 overflow-hidden">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile" class="w-full h-full object-cover">
+              </div>
+              <h2 class="text-xl font-bold">Guest User</h2>
+              <p class="text-gray-600 mb-4">Sign in to personalize your profile</p>
+              <button class="bg-red-600 text-white py-2 px-6 w-full rounded-md hover:bg-red-700 transition mb-2">
+                Sign In
+              </button>
+              <button class="bg-white border border-red-600 text-red-600 py-2 px-6 w-full rounded-md hover:bg-red-50 transition">
+                Create Account
+              </button>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-6">
+            <h3 class="font-bold text-lg mb-4">App Settings</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="flex items-center justify-between mb-2">
+                  <span>Dark Mode</span>
+                  <div class="relative inline-block w-12 align-middle select-none">
+                    <input type="checkbox" id="dark-mode" class="sr-only">
+                    <div class="block bg-gray-300 w-12 h-6 rounded-full"></div>
+                    <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform"></div>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <label class="block mb-2" for="language-select">Language</label>
+                <select id="language-select" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600">
+                  <option value="en">English</option>
+                  <option value="sw">Kiswahili</option>
+                  <option value="fr">French</option>
+                </select>
+              </div>
+              <div>
+                <label class="block mb-2" for="notification-select">Notifications</label>
+                <select id="notification-select" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600">
+                  <option value="all">All</option>
+                  <option value="important">Important Only</option>
+                  <option value="none">None</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:col-span-2">
+          <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+            <h3 class="font-bold text-lg mb-4">Cultural Preferences</h3>
+            <p class="text-gray-600 mb-4">Select your interests to receive personalized content recommendations</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+              <div class="bg-gray-100 rounded-lg p-3 flex items-center">
+                <input type="checkbox" id="interest-food" class="mr-2">
+                <label for="interest-food">Traditional Foods</label>
+              </div>
+              <div class="bg-gray-100 rounded-lg p-3 flex items-center">
+                <input type="checkbox" id="interest-music" class="mr-2">
+                <label for="interest-music">Music & Dance</label>
+              </div>
+              <div class="bg-gray-100 rounded-lg p-3 flex items-center">
+                <input type="checkbox" id="interest-stories" class="mr-2">
+                <label for="interest-stories">Stories & Myths</label>
+              </div>
+              <div class="bg-gray-100 rounded-lg p-3 flex items-center">
+                <input type="checkbox" id="interest-languages" class="mr-2">
+                <label for="interest-languages">Languages</label>
+              </div>
+              <div class="bg-gray-100 rounded-lg p-3 flex items-center">
+                <input type="checkbox" id="interest-attire" class="mr-2">
+                <label for="interest-attire">Traditional Attire</label>
+              </div>
+              <div class="bg-gray-100 rounded-lg p-3 flex items-center">
+                <input type="checkbox" id="interest-crafts" class="mr-2">
+                <label for="interest-crafts">Arts & Crafts</label>
+              </div>
+              <div class="bg-gray-100 rounded-lg p-3 flex items-center">
+                <input type="checkbox" id="interest-ceremonies" class="mr-2">
+                <label for="interest-ceremonies">Ceremonies</label>
+              </div>
+              <div class="bg-gray-100 rounded-lg p-3 flex items-center">
+                <input type="checkbox" id="interest-history" class="mr-2">
+                <label for="interest-history">Cultural History</label>
+              </div>
+            </div>
+            
+            <h4 class="font-medium mb-2">Communities of Interest</h4>
+            <select multiple id="communities-select" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 h-32">
+              <option value="kikuyu">Kikuyu</option>
+              <option value="luo">Luo</option>
+              <option value="kalenjin">Kalenjin</option>
+              <option value="luhya">Luhya</option>
+              <option value="kamba">Kamba</option>
+              <option value="maasai">Maasai</option>
+              <option value="kisii">Kisii</option>
+              <option value="meru">Meru</option>
+              <option value="mijikenda">Mijikenda</option>
+              <option value="somali">Somali</option>
+              <option value="turkana">Turkana</option>
+              <option value="samburu">Samburu</option>
+              <option value="taita">Taita</option>
+              <option value="embu">Embu</option>
+              <option value="swahili">Swahili</option>
+              <option value="all">All Communities</option>
+            </select>
+            
+            <button class="bg-red-600 text-white py-2 px-6 w-full rounded-md hover:bg-red-700 transition mt-6">
+              Save Preferences
+            </button>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Your Learning Progress</h3>
+            <div class="flex flex-col sm:flex-row justify-between mb-6">
+              <div class="mb-4 sm:mb-0">
+                <h4 class="font-medium mb-1">Game Achievements</h4>
+                <div class="flex items-center">
+                  <span class="text-2xl font-bold text-yellow-500 mr-2">0</span>
+                  <span class="text-gray-600">badges earned</span>
+                </div>
+              </div>
+              <div class="mb-4 sm:mb-0">
+                <h4 class="font-medium mb-1">Content Explored</h4>
+                <div class="flex items-center">
+                  <span class="text-2xl font-bold text-blue-500 mr-2">0%</span>
+                  <span class="text-gray-600">of total content</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Quiz Score</h4>
+                <div class="flex items-center">
+                  <span class="text-2xl font-bold text-green-500 mr-2">N/A</span>
+                  <span class="text-gray-600">average score</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="border-t pt-4">
+              <h4 class="font-medium mb-3">Recent Activity</h4>
+              <div class="text-center py-8 text-gray-500">
+                <i class="fas fa-history text-4xl mb-3"></i>
+                <p>Sign in to track your activity and learning progress.</p>
+              </div>
+            </div>
+            
+            <div class="border-t pt-4 mt-4">
+              <h4 class="font-medium mb-3">Saved Content</h4>
+              <div class="text-center py-8 text-gray-500">
+                <i class="fas fa-bookmark text-4xl mb-3"></i>
+                <p>Sign in to save your favorite cultural content for easy access.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Bottom Navigation (Mobile) -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t md:hidden py-2 z-40">
+    <div class="flex justify-around items-center">
+      <button class="nav-item flex flex-col items-center py-1 px-3 active" data-tab="home">
+        <i class="fas fa-home text-lg"></i>
+        <span class="text-xs mt-1">Home</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-1 px-3" data-tab="explore">
+        <i class="fas fa-compass text-lg"></i>
+        <span class="text-xs mt-1">Explore</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-1 px-3" data-tab="games">
+        <i class="fas fa-gamepad text-lg"></i>
+        <span class="text-xs mt-1">Games</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-1 px-3" data-tab="community">
+        <i class="fas fa-users text-lg"></i>
+        <span class="text-xs mt-1">Community</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-1 px-3" data-tab="more">
+        <i class="fas fa-ellipsis-h text-lg"></i>
+        <span class="text-xs mt-1">More</span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Side Navigation (Desktop) -->
+  <nav class="hidden md:block fixed left-0 top-0 bottom-0 w-16 bg-white border-r z-40 mt-16">
+    <div class="flex flex-col items-center pt-4">
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full active" data-tab="home">
+        <i class="fas fa-home text-xl"></i>
+        <span class="text-xs mt-1">Home</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full" data-tab="foods">
+        <i class="fas fa-utensils text-xl"></i>
+        <span class="text-xs mt-1">Foods</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full" data-tab="attire">
+        <i class="fas fa-tshirt text-xl"></i>
+        <span class="text-xs mt-1">Attire</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full" data-tab="languages">
+        <i class="fas fa-language text-xl"></i>
+        <span class="text-xs mt-1">Languages</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full" data-tab="videos">
+        <i class="fas fa-video text-xl"></i>
+        <span class="text-xs mt-1">Videos</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full" data-tab="stories">
+        <i class="fas fa-book-open text-xl"></i>
+        <span class="text-xs mt-1">Stories</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full" data-tab="games">
+        <i class="fas fa-gamepad text-xl"></i>
+        <span class="text-xs mt-1">Games</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full" data-tab="community">
+        <i class="fas fa-users text-xl"></i>
+        <span class="text-xs mt-1">Community</span>
+      </button>
+      <button class="nav-item flex flex-col items-center py-3 px-2 w-full" data-tab="feedback">
+        <i class="fas fa-comment-alt text-xl"></i>
+        <span class="text-xs mt-1">Feedback</span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Navigation Dropdown -->
+  <div id="mobile-more-menu" class="fixed bottom-16 right-0 bg-white rounded-t-xl shadow-lg p-4 w-screen transform translate-y-full transition-transform duration-300 ease-in-out z-50 hidden">
+    <div class="grid grid-cols-3 gap-4">
+      <button class="flex flex-col items-center py-2" data-tab="foods">
+        <i class="fas fa-utensils text-xl text-red-600"></i>
+        <span class="text-sm mt-1">Foods</span>
+      </button>
+      <button class="flex flex-col items-center py-2" data-tab="attire">
+        <i class="fas fa-tshirt text-xl text-yellow-500"></i>
+        <span class="text-sm mt-1">Attire</span>
+      </button>
+      <button class="flex flex-col items-center py-2" data-tab="languages">
+        <i class="fas fa-language text-xl text-blue-600"></i>
+        <span class="text-sm mt-1">Languages</span>
+      </button>
+      <button class="flex flex-col items-center py-2" data-tab="videos">
+        <i class="fas fa-video text-xl text-green-600"></i>
+        <span class="text-sm mt-1">Videos</span>
+      </button>
+      <button class="flex flex-col items-center py-2" data-tab="stories">
+        <i class="fas fa-book-open text-xl text-purple-600"></i>
+        <span class="text-sm mt-1">Stories</span>
+      </button>
+      <button class="flex flex-col items-center py-2" data-tab="feedback">
+        <i class="fas fa-comment-alt text-xl text-indigo-600"></i>
+        <span class="text-sm mt-1">Feedback</span>
+      </button>
+      <button class="flex flex-col items-center py-2" data-tab="profile">
+        <i class="fas fa-user text-xl text-pink-600"></i>
+        <span class="text-sm mt-1">Profile</span>
+      </button>
+    </div>
+    <button id="close-more-menu" class="w-full text-center pt-4 text-gray-600">
+      <i class="fas fa-times"></i> Close
+    </button>
+  </div>
+  
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <div class="flex items-center">
+      <i class="fas fa-check-circle mr-2"></i>
+      <span id="toast-message">Operation successful!</span>
+    </div>
+  </div>
+  
+  <!-- Loading Spinner -->
+  <div class="loading-spinner"></div>
+  
+  <!-- Content Detail Modal -->
+  <div id="content-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modal-body">
+        <!-- Content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile Explore Menu -->
+  <div id="explore-menu" class="fixed inset-0 bg-white z-50 transform translate-y-full transition-transform duration-300 ease-in-out hidden">
+    <div class="pt-12 pb-20 px-4">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Explore Categories</h2>
+        <button id="close-explore" class="bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="grid grid-cols-2 gap-4">
+        <button class="bg-white shadow-md rounded-xl p-4 flex flex-col items-center" data-tab="foods">
+          <i class="fas fa-utensils text-3xl text-red-600 mb-3"></i>
+          <span class="font-medium">Foods</span>
+        </button>
+        <button class="bg-white shadow-md rounded-xl p-4 flex flex-col items-center" data-tab="attire">
+          <i class="fas fa-tshirt text-3xl text-yellow-500 mb-3"></i>
+          <span class="font-medium">Attire</span>
+        </button>
+        <button class="bg-white shadow-md rounded-xl p-4 flex flex-col items-center" data-tab="languages">
+          <i class="fas fa-language text-3xl text-blue-600 mb-3"></i>
+          <span class="font-medium">Languages</span>
+        </button>
+        <button class="bg-white shadow-md rounded-xl p-4 flex flex-col items-center" data-tab="videos">
+          <i class="fas fa-video text-3xl text-green-600 mb-3"></i>
+          <span class="font-medium">Videos</span>
+        </button>
+        <button class="bg-white shadow-md rounded-xl p-4 flex flex-col items-center" data-tab="stories">
+          <i class="fas fa-book-open text-3xl text-purple-600 mb-3"></i>
+          <span class="font-medium">Stories</span>
+        </button>
+        <button class="bg-white shadow-md rounded-xl p-4 flex flex-col items-center" data-tab="games">
+          <i class="fas fa-gamepad text-3xl text-indigo-600 mb-3"></i>
+          <span class="font-medium">Games</span>
+        </button>
+        <button class="bg-white shadow-md rounded-xl p-4 flex flex-col items-center" data-tab="community">
+          <i class="fas fa-users text-3xl text-pink-600 mb-3"></i>
+          <span class="font-medium">Community</span>
+        </button>
+        <button class="bg-white shadow-md rounded-xl p-4 flex flex-col items-center" data-tab="feedback">
+          <i class="fas fa-comment-alt text-3xl text-teal-600 mb-3"></i>
+          <span class="font-medium">Feedback</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
